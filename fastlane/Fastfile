@@ -1,0 +1,185 @@
+# Customize this file, documentation can be found here:
+# https://docs.fastlane.tools/actions/
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.68.2"
+
+
+PROJECT_NAME = "Starter"
+
+# ENVS
+DEV_ENV = "DEV"
+STAGE_ENV = "STAGE"
+PREPRODUCTION_ENV = "PREPRODUCTION"
+PRODUCTION_ENV = "PRODUCTION"
+
+# ANDROID GRADLE FLAVOR TASKS
+DEV_GRADLE_TASK = "assembleDev"
+STAGE_GRADLE_TASK = "assembleStage"
+PREPRODUCTION_GRADLE_TASK = "assemblePreproduction"
+PRODUCTION_GRADLE_TASK = "assembleProduction"
+
+# ANDROID FLAVORS
+# DEV_FLAVOR = "dev"
+# STAGE_FLAVOR = "stage"
+# PREPRODUCTION_FLAVOR = "preproduction"
+# PRODUCTION_FLAVOR = "production"
+
+# IOS SCHEMES
+DEV_SCHEME = "dev"
+STAGE_SCHEME = "stage"
+PREPRODUCTION_SCHEME = "preproduction"
+PRODUCTION_SCHEME = "production"
+
+# IOS BUNDLE_IDS
+DEV_BUNDLE_ID = "com.starter.dev"
+STAGE_BUNDLE_ID = "com.starter.stage"
+PREPRODUCTION_BUNDLE_ID = "com.starter.preproduction"
+PRODUCTION_BUNDLE_ID = "com.starter"
+
+# IOS PROVISIONING PROFILES
+DEV_PROFILE = "DEV PROVISIONING PROFILE NAME"
+STAGE_PROFILE = "STAGE PROVISIONING PROFILE NAME"
+PREPRODUCTION_PROFILE = "PREPRODUCTION PROVISIONING PROFILE NAME"
+PRODUCTION_PROFILE = "PRODUCTION PROVISIONING PROFILE NAME"
+
+
+platform :ios do
+  lane :dev do
+    increment_build_number(
+      build_number: Time.now.strftime("%Y%m%d%H%M"),
+      xcodeproj: "./ios/#{PROJECT_NAME}.xcodeproj",
+    )
+
+    build_app(
+      workspace: "./ios/#{PROJECT_NAME}.xcworkspace",
+      scheme: DEV_SCHEME,
+      export_method: "development",
+      output_directory: "./iosBuild",
+      output_name: "#{PROJECT_NAME}-#{DEV_ENV}-#{Time.now.strftime("%Y%m%d%H%M")}",
+      export_options: {
+        iCloudContainerEnvironment: "Production",
+        provisioningProfiles: {
+          "#{DEV_BUNDLE_ID}": DEV_PROFILE,
+        }
+      }
+    )
+  end
+
+  lane :stage do
+    increment_build_number(
+      build_number: Time.now.strftime("%Y%m%d%H%M"),
+      xcodeproj: "./ios/#{PROJECT_NAME}.xcodeproj",
+    )
+
+    build_app(
+      workspace: "./ios/#{PROJECT_NAME}.xcworkspace",
+      scheme: STAGE_SCHEME,
+      export_method: "ad-hoc",
+      output_directory: "./iosBuild",
+      output_name: "#{PROJECT_NAME}-#{STAGE_ENV}-#{Time.now.strftime("%Y%m%d%H%M")}",
+      export_options: {
+        iCloudContainerEnvironment: "Production",
+        provisioningProfiles: {
+          "#{STAGE_BUNDLE_ID}": STAGE_PROFILE,
+        }
+      }
+    )
+  end
+
+  lane :preproduction do
+    increment_build_number(
+      build_number: Time.now.strftime("%Y%m%d%H%M"),
+      xcodeproj: "./ios/#{PROJECT_NAME}.xcodeproj",
+    )
+
+    build_app(
+      workspace: "./ios/#{PROJECT_NAME}.xcworkspace",
+      scheme: PREPRODUCTION_SCHEME,
+      export_method: "ad-hoc",
+      output_directory: "./iosBuild",
+      output_name: "#{PROJECT_NAME}-#{PREPRODUCTION_ENV}-#{Time.now.strftime("%Y%m%d%H%M")}",
+      export_options: {
+        iCloudContainerEnvironment: "Production",
+        provisioningProfiles: {
+          "#{PREPRODUCTION_BUNDLE_ID}": PREPRODUCTION_PROFILE,
+        }
+      }
+    )
+  end
+
+  lane :production do
+    increment_build_number(
+      build_number: Time.now.strftime("%Y%m%d%H%M"),
+      xcodeproj: "./ios/#{PROJECT_NAME}.xcodeproj",
+    )
+
+    build_app(
+      workspace: "./ios/#{PROJECT_NAME}.xcworkspace",
+      scheme: PRODUCTION_SCHEME,
+      export_method: "ad-hoc",
+      output_directory: "./iosBuild",
+      output_name: "#{PROJECT_NAME}-#{PRODUCTION_ENV}-#{Time.now.strftime("%Y%m%d%H%M")}",
+      export_options: {
+        iCloudContainerEnvironment: "Production",
+        provisioningProfiles: {
+          "#{PRODUCTION_BUNDLE_ID}": PRODUCTION_PROFILE,
+        }
+      }
+    )
+  end
+
+end
+
+platform :android do
+
+  lane :dev do
+    gradle(
+      task: DEV_GRADLE_TASK,
+      project_dir: "android/",
+    )
+    sh "mkdir -p ../androidBuilds"
+    sh "mv #{Actions.lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]} \
+    ../androidBuilds/#{PROJECT_NAME}-#{DEV_ENV}-#{Time.now.strftime("%Y%m%d%H%M")}.apk"
+  end
+
+  lane :stage do
+    gradle(
+      task: STAGE_GRADLE_TASK,
+      project_dir: "android/",
+    )
+    sh "mkdir -p ../androidBuilds"
+    sh "mv #{Actions.lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]} \
+    ../androidBuilds/#{PROJECT_NAME}-#{STAGE_ENV}-#{Time.now.strftime("%Y%m%d%H%M")}.apk"
+  end
+
+  lane :preproduction do
+    gradle(
+      task: PREPRODUCTION_GRADLE_TASK,
+      project_dir: "android/",
+    )
+    sh "mkdir -p ../androidBuilds"
+    sh "mv #{Actions.lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]} \
+    ../androidBuilds/#{PROJECT_NAME}-#{PREPRODUCTION_ENV}-#{Time.now.strftime("%Y%m%d%H%M")}.apk"
+  end
+
+  lane :production do
+    gradle(
+      task: PRODUCTION_GRADLE_TASK,
+      project_dir: "android/",
+    )
+    sh "mkdir -p ../androidBuilds"
+    sh "mv #{Actions.lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]} \
+    ../androidBuilds/#{PROJECT_NAME}-#{PRODUCTION_ENV}-#{Time.now.strftime("%Y%m%d%H%M")}.apk"
+  end
+
+end

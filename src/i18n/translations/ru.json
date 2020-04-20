@@ -1,0 +1,99 @@
+{
+  "common": {
+    "helloWorld": "Привет, мир",
+    "languages": {
+      "en": "en",
+      "ru": "ru"
+    },
+    "cancel": "Отменить",
+    "save": "Сохранить",
+    "back": "Назад"
+  },
+  "languagesLabels": {
+    "en": "Английский",
+    "ru": "Русский"
+  },
+  "profile": {
+    "profile": "Профиль 1",
+    "email_title": "Поле эмейл",
+    "email_placeholder": "Введите ваш эмейл",
+    "name_title": "Поле имя",
+    "name_placeholder": "Введите ваше имя",
+    "photo": "Выбрать фото",
+    "lng_title": "Выберите язык",
+    "lng_btns": "Язык:",
+    "btn_password": "Сменить пароль",
+    "change_password_text": "ЧТобы пароль был надежным, используйте минимум 8 символов и один специальный",
+    "save_password_button": "Сменить пароль",
+    "save_info": "Обновить",
+    "tab_password": "Пароль",
+    "tab_profile": "Персональная информация",
+    "old_password_title": "Старый пароль",
+    "old_password_placeholder": "Введите старый пароль",
+    "new_password_title": "Новый пароль",
+    "new_password_placeholder": "Введите новый пароль",
+    "confirm_password_title": "Повторите пароль",
+    "confirm_password_placeholder": "Повторите пароль"
+  },
+  "main_page": {
+    "main_page": "Главная страница",
+    "go_to_profile": "К профилю",
+    "logout": "Выйти"
+  },
+  "login": {
+    "title": "Авторизация",
+    "email_title": "Поле эмейл",
+    "email_placeholder": "Введите ваш эмейл",
+    "password_title": "Поле пароль",
+    "password_placeholder": "Введите ваш пароль",
+    "btn_sign_in": "Войти",
+    "btn_sign_up": "Регистрация",
+    "link_btn": "Все еще нет аккаунта? Перейдите на: ",
+    "btn_forgot_password": "Восстановление пароля",
+    "link_btn_forgot_password": "Забыли пароль? Перейдтите на: ",
+    "show_password": "Показать пароль"
+  },
+  "sign_up": {
+    "title": "Регистрация",
+    "email_title": "Поле эмейл",
+    "email_placeholder": "Введите ваш эмейл",
+    "password_title": "Поле пароля",
+    "password_placeholder": "Введите ваш новый пароль",
+    "password_confirm_title": "Поле подтверждения пароля",
+    "password_confirm_placeholder": "Введите ваш новый пароль еще раз",
+    "btn_sign_up": "Регистрация",
+    "btn_sign_in": "Авторизация",
+    "link_btn": "Или используйте свой аккаунт: "
+  },
+  "forgot_password": {
+    "title": "Восстановление пароля",
+    "email_title": "Поле эмейл",
+    "email_placeholder": "Введите ваш эмейл",
+    "btn_reset_password": "Отправить ссылку",
+    "btn_back": "Авторизация",
+    "link_btn_back": "Вспомнили пароль? Пройдите на: "
+  },
+  "reset_password": {
+    "title": "Сброс пароля",
+    "password_title": "Поле пароль",
+    "password_placeholder": "Введите ваш новый пароль",
+    "password_confirm_title": "Поле подтверждения пароля ",
+    "password_confirm_placeholder": "Введите ваш новый пароль еще раз",
+    "btn_reset_password": "Сохранить"
+  },
+  "action_sheet": {
+    "take_picture": "Сделать фото",
+    "gallery": "Галерея"
+  },
+  "product_list": {
+    "title": "Список продуктов"
+  },
+  "single_product": {
+    "title": "Продукт"
+  },
+  "default_errors": {
+    "required": "Это обязательное поле",
+    "format": "Не правильный формат пароля",
+    "confirm": "Пароли не совпадают"
+  }
+}

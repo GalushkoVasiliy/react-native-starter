@@ -1,0 +1,14 @@
+// @flow
+
+
+export default {
+  SERVER_DATE_FORMAT: "YYYY-MM-DD",
+  SERVER_TIME_FORMAT: "HH:mm",
+  SERVER_TIME_SECONDS_FORMAT: "HH:mm:ss",
+  AUDIO_FORMAT: "YYYYMMDDHHmm",
+  DAY_NAME_FORMAT: "DD dddd",
+  DAY_NAME_DD: "dd",
+  WEEK_DAY: "dddd",
+  MONTH_LABEL: "MMMM",
+  MONTH_TITLE_DAY: "D",
+};

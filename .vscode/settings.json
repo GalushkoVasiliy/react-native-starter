@@ -1,0 +1,35 @@
+{
+  "editor.tabSize": 2,
+  "javascript.validate.enable": false,
+  "flow.useLSP": true,
+  "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
+  "flow.showUncovered": false,
+  "flow.useNPMPackagedFlow": true,
+  "psi-header.changes-tracking": {
+      "isActive": true,
+  },
+
+  // An optional set of global configuration options.
+  "psi-header.config": {
+      "copyrightHolder": "",
+  },
+
+  // An optional set of language-specific syntax settings.
+  "psi-header.lang-config": [],
+
+  // Custom license text used where psi-header.config.license = Custom
+  "psi-header.license-text": [],
+
+  // An optional set of language-specific templates
+  "psi-header.templates": [],
+
+  // An array of key value pairs that define the template variables.
+  "psi-header.variables": [],
+  "breadcrumbs.enabled": true,
+  "cSpell.words": [
+    "CRASHLYTICS",
+    "gradlew",
+    "preproduction"
+  ],
+  "java.configuration.updateBuildConfiguration": "disabled"
+}

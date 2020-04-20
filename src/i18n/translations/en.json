@@ -1,0 +1,99 @@
+{
+  "common": {
+    "helloWorld": "Hello world",
+    "languages": {
+      "en": "en",
+      "ru": "ru"
+    },
+    "cancel": "Cancel",
+    "save": "Save",
+    "back": "GoBack"
+  },
+  "languagesLabels": {
+    "en": "English",
+    "ru": "Russian"
+  },
+  "profile": {
+    "profile": "Profile",
+    "email_title": "Your Email",
+    "email_placeholder": "Enter your email",
+    "name_title": "Full name",
+    "name_placeholder": "Enter your name",
+    "photo": "Select photo",
+    "lng_title": "Select Language",
+    "lng_btns": "Language:",
+    "btn_password": "Change password",
+    "change_password_text": "To keep your password secure, include a min. of 8 characters and 1 special character",
+    "save_password_button": "Change password",
+    "save_info": "Update profile",
+    "tab_password": "Password",
+    "tab_profile": "Personal info",
+    "old_password_title": "Old Password",
+    "old_password_placeholder": "Enter old password",
+    "new_password_title": "New Password",
+    "new_password_placeholder": "Enter your password",
+    "confirm_password_title": "Confirm New Password",
+    "confirm_password_placeholder": "Confirm new password"
+  },
+  "main_page": {
+    "main_page": "Main page",
+    "go_to_profile": "Go to profile",
+    "logout": "Logout"
+  },
+  "login": {
+    "title": "Sign In Page",
+    "email_title": "Email title",
+    "email_placeholder": "Enter your email",
+    "password_title": "Password title",
+    "password_placeholder": "Enter your password",
+    "btn_sign_in": "Login",
+    "btn_sign_up": "SignUp",
+    "link_btn": "Don’t have an account? Go to: ",
+    "btn_forgot_password": "ForgotPassword",
+    "link_btn_forgot_password": "Forgot your password? Go to: ",
+    "show_password": "Show Password"
+  },
+  "sign_up": {
+    "title": "Sign Up Page",
+    "email_title": "Email title",
+    "email_placeholder": "Enter your email",
+    "password_title": "Password title",
+    "password_placeholder": "Enter your password",
+    "password_confirm_title": "Password Confirm title",
+    "password_confirm_placeholder": "Enter confirm password",
+    "btn_sign_up": "SignUp",
+    "btn_sign_in": "SignIn",
+    "link_btn": "Or use your account: "
+  },
+  "forgot_password": {
+    "title": "Forgot Password",
+    "email_title": "Email title",
+    "email_placeholder": "Enter your email",
+    "btn_reset_password": "Reset password",
+    "btn_back": "Sign In",
+    "link_btn_back": "Remember your password? Go to: "
+  },
+  "reset_password": {
+    "title": "Reset Password",
+    "password_title": "Password title",
+    "password_placeholder": "Enter your password",
+    "password_confirm_title": "Password confirm title",
+    "password_confirm_placeholder": "Enter confirm password",
+    "btn_reset_password": "Save new password"
+  },
+  "action_sheet": {
+    "take_picture": "Take a picture",
+    "gallery": "Gallery"
+  },
+  "product_list": {
+    "title": "Product List"
+  },
+  "single_product": {
+    "title": "Single Product"
+  },
+  "default_errors": {
+    "required": "This input is require",
+    "format": "Wrong format of input",
+    "confirm": "passwords don't match"
+  }
+}
