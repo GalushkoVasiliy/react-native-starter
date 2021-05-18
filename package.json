@@ -32,7 +32,7 @@
     "react-native-config": "luggit/react-native-config#master",
     "react-native-doc-viewer": "git+https://github.com/S-PRO/react-native-doc-viewer.git",
     "react-native-document-picker": "2.3.0",
-    "react-native-fast-image": "^7.0.2",
+    "react-native-fast-image": "^8.3.0",
     "react-native-firebase": "5.4.2",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-image-crop-picker": "^0.25.2",
